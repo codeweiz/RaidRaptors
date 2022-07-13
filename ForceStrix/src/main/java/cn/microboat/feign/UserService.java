@@ -1,5 +1,6 @@
 package cn.microboat.feign;
 
+import cn.microboat.feign.fallback.UserServiceFallBackImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * @author zhouwei
  */
-@FeignClient("raid-raptor-service-provider")
+@FeignClient(value = "raid-raptor-service-provider", decode404 = true, fallback = UserServiceFallBackImpl.class)
 public interface UserService {
 
     /**

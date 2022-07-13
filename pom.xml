@@ -21,6 +21,7 @@
         <spring-boot-dependencies.version>2.6.7</spring-boot-dependencies.version>
         <spring-cloud-dependencies.version>2021.0.3</spring-cloud-dependencies.version>
         <spring-cloud-alibaba-dependencies.version>2021.1</spring-cloud-alibaba-dependencies.version>
+        <spring-cloud-starter-zipkin.version>2.2.2.RELEASE</spring-cloud-starter-zipkin.version>
         <spring-cloud-starter-netflix-hystrix.version>2.2.10.RELEASE</spring-cloud-starter-netflix-hystrix.version>
         <bcprov-jdk15on.version>1.70</bcprov-jdk15on.version>
         <jackson-databind.version>2.13.3</jackson-databind.version>
@@ -65,6 +66,11 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
                 <version>${spring-cloud-starter-netflix-hystrix.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zipkin</artifactId>
+                <version>${spring-cloud-starter-zipkin.version}</version>
             </dependency>
 
             <dependency>

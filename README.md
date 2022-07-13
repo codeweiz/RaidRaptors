@@ -8,6 +8,7 @@ RaidRaptors：微服务架构<br>
     - SpringCloud-Netflix-Hystrix<br>
     - SpringCloud-Alibaba-Sentinel<br>
     - SpringCloud-Alibaba-Nacos<br>
+    - SpringCloud-Zipkin<br>
 
 包介绍：<br>
     - commons：公共包，存放公共常量、线程池<br>

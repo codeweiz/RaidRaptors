@@ -1,5 +1,7 @@
 package cn.microboat.controller;
 
+import cn.microboat.utils.ThreadUtils;
+import lombok.SneakyThrows;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,9 +27,10 @@ public class HiController {
     @Resource
     private RestTemplate restTemplate;
 
+    @SneakyThrows
     @RequestMapping(value = "/get", method = RequestMethod.GET)
     public String getFromServiceProvider() {
-        return restTemplate.getForObject("http://raid-raptor-service-provider/user/hi", String.class);
+        return ThreadUtils.THREAD_POOL.submit(() -> restTemplate.getForObject("http://raid-raptor-service-provider/user/hi", String.class)).get();
     }
 
     @RequestMapping(value = "/hi2", method = RequestMethod.GET)

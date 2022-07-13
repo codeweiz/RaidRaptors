@@ -35,6 +35,8 @@ public class HiController {
 
     @RequestMapping(value = "/hi2", method = RequestMethod.GET)
     public String hi2() {
+        // java.lang.ArithmeticException，会走全局异常处理，记录日志并返回通用返回
+        int i = 1 / 0;
         return "hi2";
     }
 }

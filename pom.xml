@@ -11,6 +11,8 @@
     <modules>
         <module>Gateway</module>
         <module>ServiceProvider</module>
+        <module>ForceStrix</module>
+        <module>commons</module>
     </modules>
 
     <properties>

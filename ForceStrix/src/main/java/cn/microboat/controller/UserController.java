@@ -1,7 +1,6 @@
 package cn.microboat.controller;
 
 import cn.microboat.feign.UserService;
-import cn.microboat.utils.ThreadUtils;
 import lombok.SneakyThrows;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,18 +22,18 @@ public class UserController {
     @SneakyThrows
     @GetMapping("/hi")
     public String getUser() {
-        return ThreadUtils.THREAD_POOL.submit(() -> userService.hi()).get();
+        return userService.hi();
     }
 
     @SneakyThrows
     @GetMapping("/show")
     public boolean showUser() {
-        return ThreadUtils.THREAD_POOL.submit(() -> userService.show()).get();
+        return userService.show();
     }
 
     @SneakyThrows
     @GetMapping("/hi2/{name}")
     public String hi2(@PathVariable("name") String name) {
-        return ThreadUtils.THREAD_POOL.submit(() -> userService.hi2(name)).get();
+        return userService.hi2(name);
     }
 }

@@ -1,8 +1,8 @@
 package cn.microboat.config;
 
-import cn.microboat.pojo.ReturnBase;
-import cn.microboat.pojo.exception.BizCodeEnum;
-import cn.microboat.pojo.exception.Error;
+import cn.microboat.pojo.entity.ReturnBase;
+import cn.microboat.pojo.entity.exception.BizCodeEnum;
+import cn.microboat.pojo.entity.exception.Error;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;

@@ -1,6 +1,6 @@
-package cn.microboat.pojo;
+package cn.microboat.pojo.entity;
 
-import cn.microboat.pojo.exception.Error;
+import cn.microboat.pojo.entity.exception.Error;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

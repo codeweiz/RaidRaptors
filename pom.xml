@@ -13,6 +13,9 @@
         <module>ServiceProvider</module>
         <module>ForceStrix</module>
         <module>commons</module>
+        <module>Cache</module>
+        <module>Messaging</module>
+        <module>Modules</module>
     </modules>
 
     <properties>
@@ -25,6 +28,7 @@
         <spring-cloud-starter-netflix-hystrix.version>2.2.10.RELEASE</spring-cloud-starter-netflix-hystrix.version>
         <bcprov-jdk15on.version>1.70</bcprov-jdk15on.version>
         <jackson-databind.version>2.13.3</jackson-databind.version>
+        <hutool.version>5.7.22</hutool.version>
         <guava.version>31.1-jre</guava.version>
         <netty-common.version>4.1.77.Final</netty-common.version>
         <commons-codec.version>1.15</commons-codec.version>
@@ -33,10 +37,12 @@
         <httpclient.version>4.5.13</httpclient.version>
         <spring-security-crypto.version>5.7.1</spring-security-crypto.version>
         <spring-beans.version>5.3.20</spring-beans.version>
+        <spring-messaging.version>5.3.21</spring-messaging.version>
         <snakeyaml.version>1.30</snakeyaml.version>
         <lombok.version>1.18.24</lombok.version>
         <slf4j-api.version>1.7.36</slf4j-api.version>
         <logback-classic.version>1.2.11</logback-classic.version>
+        <knife4j.version>3.0.3</knife4j.version>
     </properties>
 
     <dependencyManagement>
@@ -84,6 +90,11 @@
                 <version>${netty-common.version}</version>
             </dependency>
             <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
@@ -128,6 +139,11 @@
                 <artifactId>spring-beans</artifactId>
                 <version>${spring-beans.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-messaging</artifactId>
+                <version>${spring-messaging.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -143,6 +159,17 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback-classic.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

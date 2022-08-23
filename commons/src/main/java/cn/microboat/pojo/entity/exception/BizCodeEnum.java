@@ -1,4 +1,4 @@
-package cn.microboat.pojo.exception;
+package cn.microboat.pojo.entity.exception;
 
 /**
  * @author zhouwei

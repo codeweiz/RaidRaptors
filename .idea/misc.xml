@@ -9,7 +9,9 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/ForceStrix/pom.xml" />
         <option value="$PROJECT_DIR$/PersonService/pom.xml" />
+        <option value="$PROJECT_DIR$/ServiceProvider/pom.xml" />
       </set>
     </option>
   </component>

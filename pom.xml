@@ -10,9 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Gateway</module>
-        <module>ServiceProvider</module>
-        <module>ForceStrix</module>
-        <module>commons</module>
+        <module>Commons</module>
         <module>Cache</module>
         <module>Messaging</module>
         <module>Modules</module>

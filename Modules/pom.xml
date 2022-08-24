@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>PersonService</module>
+        <module>UserService</module>
     </modules>
 
     <properties>

@@ -25,7 +25,7 @@ public class CustomFilter implements GlobalFilter, Ordered {
         // swagger 相关地址，放行
         if (StringUtils.endsWithIgnoreCase(exchange.getRequest().getPath().pathWithinApplication().toString(), "/v2/api-docs")) {
             return chain.filter(exchange);
-        };
+        }
 
         HttpHeaders headers = exchange.getRequest().getHeaders();
         List<String> token = headers.get(Constants.TOKEN);

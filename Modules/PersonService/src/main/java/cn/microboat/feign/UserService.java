@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * @author zhouwei
  */
-@FeignClient(value = "raid-raptor-service-provider", decode404 = true, fallback = UserServiceFallBackImpl.class)
+@FeignClient(value = "raid-raptor-user", decode404 = true, fallback = UserServiceFallBackImpl.class)
 public interface UserService {
 
     /**
